@@ -44,6 +44,9 @@ public class MainController implements Initializable {
     @FXML
     private Button btnPesquisar;
 
+    @FXML
+    private Label labelError;
+
 
     private final AddressViewModel addressViewModel = new AddressViewModel();
 
@@ -92,6 +95,8 @@ public class MainController implements Initializable {
             });
             return row;
         });
+
+        labelError.visibleProperty().bind(addressViewModel.isErrorProperty());
 
         Platform.runLater(() -> primaryStage = (Stage) textFieldPesquisar.getScene().getWindow());
     }

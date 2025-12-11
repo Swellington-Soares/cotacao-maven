@@ -6,6 +6,7 @@ import dev.swell.cotacao.model.AddressData;
 import dev.swell.cotacao.model.AddressMapper;
 import dev.swell.cotacao.model.AddressModel;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -15,6 +16,7 @@ public class AddressViewModel {
     private final ObservableList<AddressModel> _addresses = FXCollections.observableArrayList();
     private final SimpleBooleanProperty _isLoading =  new SimpleBooleanProperty(false);
     private final SimpleBooleanProperty _isError =  new SimpleBooleanProperty(false);
+    private final SimpleStringProperty _errorMessage = new SimpleStringProperty();
 
     public SimpleBooleanProperty isLoadingProperty() {
         return _isLoading;
@@ -28,6 +30,9 @@ public class AddressViewModel {
         return _isError;
     }
 
+    public SimpleStringProperty errorMessaProperty() {
+        return _errorMessage;
+    }
 
     private void addAddress(AddressModel address) {
         if (_addresses.stream().noneMatch( a -> a.getCep().equalsIgnoreCase(address.getCep())))
