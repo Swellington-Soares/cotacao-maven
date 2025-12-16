@@ -1,4 +1,4 @@
-package dev.swell.cotacao.model;
+package dev.swell.viacep.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

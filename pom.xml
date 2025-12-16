@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.swell</groupId>
-    <artifactId>cotacao</artifactId>
+    <artifactId>viacep</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -14,7 +14,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <javafx.version>17.0.8</javafx.version>
         <junit.version>5.10.0</junit.version>
-        <mainClass>dev.swell.cotacao.MainApp</mainClass>
+        <mainClass>dev.swell.viacep.MainApp</mainClass>
     </properties>
 
     <dependencies>

@@ -1,8 +1,8 @@
-package dev.swell.cotacao.api;
+package dev.swell.viacep.api;
 
 import com.google.gson.reflect.TypeToken;
-import dev.swell.cotacao.AppGson;
-import dev.swell.cotacao.model.AddressData;
+import dev.swell.viacep.AppGson;
+import dev.swell.viacep.model.AddressData;
 
 import java.io.*;
 import java.lang.reflect.Type;

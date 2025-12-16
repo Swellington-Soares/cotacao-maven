@@ -1,10 +1,10 @@
-package dev.swell.cotacao.viewmodel;
+package dev.swell.viacep.viewmodel;
 
-import dev.swell.cotacao.api.Cache;
-import dev.swell.cotacao.api.ViaCepAPI;
-import dev.swell.cotacao.model.AddressData;
-import dev.swell.cotacao.model.AddressMapper;
-import dev.swell.cotacao.model.AddressModel;
+import dev.swell.viacep.api.Cache;
+import dev.swell.viacep.api.ViaCepAPI;
+import dev.swell.viacep.model.AddressData;
+import dev.swell.viacep.model.AddressMapper;
+import dev.swell.viacep.model.AddressModel;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -60,5 +60,9 @@ public class AddressViewModel {
 
     public AddressViewModel() {
         Cache.GelAll().forEach(address -> addAddress( AddressMapper.toModel(address) ));
+    }
+
+    public void deleteAll() {
+        _addresses.clear();
     }
 }

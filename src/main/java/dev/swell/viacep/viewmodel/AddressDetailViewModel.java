@@ -1,6 +1,6 @@
-package dev.swell.cotacao.viewmodel;
+package dev.swell.viacep.viewmodel;
 
-import dev.swell.cotacao.model.AddressModel;
+import dev.swell.viacep.model.AddressModel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

@@ -1,7 +1,7 @@
-package dev.swell.cotacao.controller;
+package dev.swell.viacep.controller;
 
-import dev.swell.cotacao.model.AddressModel;
-import dev.swell.cotacao.viewmodel.AddressDetailViewModel;
+import dev.swell.viacep.model.AddressModel;
+import dev.swell.viacep.viewmodel.AddressDetailViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 

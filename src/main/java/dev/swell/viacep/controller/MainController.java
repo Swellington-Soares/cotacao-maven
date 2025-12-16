@@ -1,12 +1,10 @@
-package dev.swell.cotacao.controller;
+package dev.swell.viacep.controller;
 
-import dev.swell.cotacao.MainApp;
-import dev.swell.cotacao.model.AddressData;
-import dev.swell.cotacao.model.AddressModel;
-import dev.swell.cotacao.viewmodel.AddressDetailViewModel;
-import dev.swell.cotacao.viewmodel.AddressViewModel;
+import dev.swell.viacep.MainApp;
+import dev.swell.viacep.api.Cache;
+import dev.swell.viacep.model.AddressModel;
+import dev.swell.viacep.viewmodel.AddressViewModel;
 import javafx.application.Platform;
-import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +15,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import javax.swing.event.ChangeListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -48,6 +45,7 @@ public class MainController implements Initializable {
     private Label labelError;
 
 
+
     private final AddressViewModel addressViewModel = new AddressViewModel();
 
     private String lastText = "";
@@ -57,6 +55,12 @@ public class MainController implements Initializable {
         String cep = textFieldPesquisar.getText().trim();
         lastText = cep;
         addressViewModel.findAddressInfo(cep);
+    }
+
+    @FXML
+    void btnLimparCacheAction(ActionEvent event) {
+        Cache.Clear();
+        addressViewModel.deleteAll();
     }
 
     @Override

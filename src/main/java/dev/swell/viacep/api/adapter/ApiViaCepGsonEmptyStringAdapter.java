@@ -1,4 +1,4 @@
-package dev.swell.cotacao.api.adapter;
+package dev.swell.viacep.api.adapter;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;

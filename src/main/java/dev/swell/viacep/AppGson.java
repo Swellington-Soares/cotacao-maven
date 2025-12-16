@@ -1,8 +1,8 @@
-package dev.swell.cotacao;
+package dev.swell.viacep;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dev.swell.cotacao.api.adapter.ApiViaCepGsonEmptyStringAdapter;
+import dev.swell.viacep.api.adapter.ApiViaCepGsonEmptyStringAdapter;
 
 public class AppGson {
 

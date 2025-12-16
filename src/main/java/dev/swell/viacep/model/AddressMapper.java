@@ -1,4 +1,4 @@
-package dev.swell.cotacao.model;
+package dev.swell.viacep.model;
 
 public class AddressMapper {
 
